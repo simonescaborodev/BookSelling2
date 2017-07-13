@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BookSelling</string>
+    <string name="title_activity_all_books">AllBooks</string>
+</resources>

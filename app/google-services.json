@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "71632494252",
+    "firebase_url": "https://bookselling-34de5.firebaseio.com",
+    "project_id": "bookselling-34de5",
+    "storage_bucket": "bookselling-34de5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71632494252:android:b1dfc2329f66a9c1",
+        "android_client_info": {
+          "package_name": "com.simonescaboro.bookselling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71632494252-hikqi0kr5mr98flti4gej5m8lsno8cgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simonescaboro.bookselling",
+            "certificate_hash": "4f9f017a36a3899e977200a9d8004ae74627f08f"
+          }
+        },
+        {
+          "client_id": "71632494252-p6ntdfienavg6ekp42qtai4r0qgtbefs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_OyP3U9VYBTqzdox7ME5wGakJ-Wtwse4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71632494252-p6ntdfienavg6ekp42qtai4r0qgtbefs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#1A237E">     // COLORE CHE SOSTITUISCE IL PRECEDENTE AL TOCCO
+    <item>
+        <shape
+            android:shape="oval"> //FORMA DEL BOTTONE
+            <solid android:color="#A1887F" /> //COLORE INIZIALE
+        </shape>
+    </item>
+</ripple>
