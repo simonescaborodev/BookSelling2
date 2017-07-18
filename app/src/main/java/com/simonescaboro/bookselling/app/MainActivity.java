@@ -11,6 +11,7 @@ import com.simonescaboro.bookselling.R;
 public class MainActivity extends AppCompatActivity {
 
     Button button;
+    Button myBooks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = (Button) findViewById(R.id.button1);
+        myBooks = (Button) findViewById(R.id.myBooks);
 
+        myBooks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),MyBooksClass.class));
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

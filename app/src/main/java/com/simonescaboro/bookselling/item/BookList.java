@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.simonescaboro.bookselling.R;
@@ -37,9 +39,12 @@ public class BookList extends ArrayAdapter<Book> {
         TextView textViewAuthor = (TextView) listViewItem.findViewById(R.id.textViewAuthor);
         TextView textViewSeller = (TextView) listViewItem.findViewById(R.id.textViewSeller);
         TextView textViewTitle = (TextView) listViewItem.findViewById(R.id.textViewTitle);
-
+        Button imageView = (Button) listViewItem.findViewById(R.id.imagePrice);
         Book book = booksList.get(position);
 
+        imageView.setText(book.getBookPrice()+"€");
+        String price = "R.drawable.price"+book.getBookQuality();
+        imageView.setBackgroundResource(R.drawable.price1);
         textViewAuthor.setText(book.getBookAuthor());
         textViewSeller.setText(book.getBookSeller());
         textViewTitle.setText(book.getBookTitle());

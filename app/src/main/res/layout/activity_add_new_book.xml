@@ -1,9 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.simonescaboro.bookselling.app.AddNewBook">
+    tools:context="com.simonescaboro.bookselling.app.AddNewBook"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                tools:text="Inserisci un nuovo libro"
+                android:paddingTop="@dimen/activity_vertical_margin"/>
+
+            <EditText
+                android:id="@+id/bookTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/book_title"
+                android:inputType="textPersonName"
+                style="@style/margin_editText"/>
+
+            <EditText
+                android:id="@+id/bookAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:hint="@string/book_author"
+                android:inputType="textPersonName"
+                style="@style/margin_editText"/>
+
+            <EditText
+                android:id="@+id/bookEditor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:hint="@string/book_editor"
+                android:inputType="textPersonName"
+                style="@style/margin_editText"/>
+
+            <EditText
+                android:id="@+id/bookPrice"
+                style="@style/margin_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:hint="@string/book_price"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/bookEdition"
+                style="@style/margin_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:hint="@string/book_edition"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/bookIsbn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:hint="@string/book_isbn"
+                android:inputType="number"
+                style="@style/margin_editText"/>
+
+            <EditText
+                android:id="@+id/bookPublishingYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:hint="@string/book_publishing_year"
+                android:inputType="number"
+                style="@style/margin_editText"/>
+
+            <EditText
+                android:id="@+id/bookDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/book_description" />
+
+            <Spinner
+                android:id="@+id/bookLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/languages"
+                style="@style/margin_editText"
+                />
+            <SeekBar
+                android:id="@+id/bookQuality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/addImage"
+                android:text="Aggiungi immagine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/addButton"
+                android:text="Prosegui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

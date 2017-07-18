@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -47,29 +48,22 @@ public class AllBooks extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).show();
                 startActivity(new Intent(getApplicationContext(), AddNewBook.class));
             }
         });
-    }
-/*
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Intent intent = getIntent();
 
-        String added = intent.getStringExtra(AddNewBook.ITEM_ADDED);
-            String title = intent.getStringExtra(AddNewBook.ITEM_TITLE);
-            String author = intent.getStringExtra(AddNewBook.ITEM_AUTHOR);
-            String seller = intent.getStringExtra(AddNewBook.ITEM_SELLER);
-            String id = databaseBooks.push().getKey();
-            Book book = new Book(title,author,seller,id);
-            databaseBooks.child(id).setValue(book);
-
+        listViewBooks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(AllBooks.this, "CIAO", Toast.LENGTH_SHORT).show();
+                Book book = bookList.get(i);
+                Dio.getInstance().setActualBook(book);
+                Intent intent = new Intent(getApplicationContext(),ItemDetails.class);
+                startActivity(intent);
+            }
+        });
 
     }
-*/
-
 
     @Override
     protected void onStart() {

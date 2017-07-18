@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.simonescaboro.bookselling.app.VisualizeItem">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.simonescaboro.bookselling.login_registration.LoginLayoutActivity"
+    tools:showIn="@layout/login_layou">
 
 </android.support.constraint.ConstraintLayout>

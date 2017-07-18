@@ -1,17 +1,32 @@
 package com.simonescaboro.bookselling.item;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Simone on 10/07/2017.
  */
 
-public class Book {
+public class Book{
+    public String getBookId() {
+        return bookId;
+    }
+
     private String bookId;
     private String bookTitle;
     private String bookAuthor;
-    private String bookHouse;
+    private String bookEditor;
     private String bookDescription;
     private String bookLanguage;
     private String bookSeller;
+    private String bookPrice;
+    private String bookISBN;
+
+    public String getBookQuality() {
+        return bookQuality;
+    }
+
+    private String bookQuality;
     private int bookEdition;
     private int bookPublishingYear;
 
@@ -24,18 +39,20 @@ public class Book {
     public Book(){
 
     }
-    public Book(String bookTitle, String bookAuthor, String bookHouse, String bookDescription, String bookLanguage, int bookEdition, int bookPublishingYear) {
+
+    public Book(String bookId, String bookTitle, String bookAuthor, String bookEditor, String bookDescription, String bookLanguage, String bookSeller, String bookPrice, String bookISBN, int bookEdition, int bookPublishingYear, String bookQuality) {
+        this.bookId = bookId;
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
-        this.bookHouse = bookHouse;
+        this.bookEditor = bookEditor;
         this.bookDescription = bookDescription;
         this.bookLanguage = bookLanguage;
+        this.bookSeller = bookSeller;
+        this.bookPrice = bookPrice;
+        this.bookISBN = bookISBN;
         this.bookEdition = bookEdition;
         this.bookPublishingYear = bookPublishingYear;
-    }
-
-    public String getBookSeller() {
-        return bookSeller;
+        this.bookQuality = bookQuality;
     }
 
     public String getBookTitle() {
@@ -46,8 +63,8 @@ public class Book {
         return bookAuthor;
     }
 
-    public String getBookHouse() {
-        return bookHouse;
+    public String getBookEditor() {
+        return bookEditor;
     }
 
     public String getBookDescription() {
@@ -58,6 +75,18 @@ public class Book {
         return bookLanguage;
     }
 
+    public String getBookSeller() {
+        return bookSeller;
+    }
+
+    public String getBookPrice() {
+        return bookPrice;
+    }
+
+    public String getBookISBN() {
+        return bookISBN;
+    }
+
     public int getBookEdition() {
         return bookEdition;
     }
@@ -65,4 +94,5 @@ public class Book {
     public int getBookPublishingYear() {
         return bookPublishingYear;
     }
+
 }

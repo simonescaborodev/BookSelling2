@@ -14,7 +14,8 @@
     android:background="@drawable/rippleview"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="horizontal"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:descendantFocusability="blocksDescendants">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -51,14 +52,13 @@
         android:layout_height="match_parent"
         android:gravity="center">
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/imagePrice"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="24€"
             android:textSize="20dp"
             android:textColor="#FFFFFF"
             android:elevation="24dp"
-            android:background="@drawable/oval"
-            android:layout_weight="0.33" />
+            android:layout_weight="0.33"
+            android:focusableInTouchMode="true"/>
     </RelativeLayout>
 </LinearLayout>
