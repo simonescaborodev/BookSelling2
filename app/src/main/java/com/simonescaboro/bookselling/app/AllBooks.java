@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,14 +31,15 @@ public class AllBooks extends AppCompatActivity {
     DatabaseReference databaseBooks;
     ListView listViewBooks;
     List<Book> bookList;
-
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_books_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         setSupportActionBar(toolbar);
-
+        progressBar.setVisibility(View.VISIBLE);
         databaseBooks = FirebaseDatabase.getInstance().getReference("books");
 
         listViewBooks = (ListView) findViewById(R.id.listViewBooks);
